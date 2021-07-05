@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Personal Suite" parallel="classes" thread-count="10">
+    <test verbose="2" preserve-order="true"
+          name="Playground Tests">
+        <classes>
+            <class name="tests.playground.AJAXDataTest"/>
+            <class name="tests.playground.ClassAttributeTest"/>
+            <class name="tests.playground.ClickPageTest"/>
+            <class name="tests.playground.ClientSideDelayTest"/>
+            <class name="tests.playground.DynamicIdTest"/>
+            <class name="tests.playground.DynamicTableTest"/>
+            <class name="tests.playground.HiddenLayersTest"/>
+            <class name="tests.playground.LoadDelayTest"/>
+            <class name="tests.playground.MouseOverPageTest"/>
+            <class name="tests.playground.NonBrakingSpacePageTest"/>
+            <class name="tests.playground.ProgressBarTest"/>
+            <class name="tests.playground.SampleAppTest"/>
+            <class name="tests.playground.ScrollbarsTest"/>
+            <class name="tests.playground.TextPageTest"/>
+        </classes>
+    </test>
+</suite>
