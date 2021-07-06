@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Personal Suite" parallel="classes" thread-count="10">
+<suite name="Personal Suite" parallel="classes" thread-count="6">
     <test verbose="2" preserve-order="true"
           name="Playground Tests">
         <classes>
@@ -18,6 +18,8 @@
             <class name="tests.playground.SampleAppTest"/>
             <class name="tests.playground.ScrollbarsTest"/>
             <class name="tests.playground.TextPageTest"/>
+            <class name="tests.playground.VerifyTextTest"/>
+            <class name="tests.playground.VisibilityTest"/>
         </classes>
     </test>
 </suite>

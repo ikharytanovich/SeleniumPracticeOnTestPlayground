@@ -16,7 +16,9 @@ public enum PageLink {
     ScrollBars(By.xpath("//a[@href='/scrollbars']")),
     ProgressBarPage(By.xpath("//a[@href='/progressbar']")),
     MouseOverPage(By.xpath("//a[@href='/mouseover']")),
-    NonBrakingSpacePage(By.xpath("//a[@href='/nbsp']"));
+    NonBrakingSpacePage(By.xpath("//a[@href='/nbsp']")),
+    VerifyTextPage(By.xpath("//a[@href='/verifytext']")),
+    VisibilityPage(By.xpath("//a[@href='/visibility']"));
 
     private final By xpath;
 

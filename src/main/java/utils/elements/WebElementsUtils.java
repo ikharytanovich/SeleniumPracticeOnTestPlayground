@@ -9,7 +9,7 @@ import utils.driversutils.DriverThreadLocal;
 import java.util.List;
 
 public class WebElementsUtils {
-    private final static int DEFAULT_WAIT_TIME = 30;
+    private final static int DEFAULT_WAIT_TIME = 45;
 
     public static WebElement getElementWithWaiter(By by) {
         return new WebDriverWait(DriverThreadLocal.getDriver(), DEFAULT_WAIT_TIME)
