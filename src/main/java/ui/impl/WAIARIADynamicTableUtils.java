@@ -3,7 +3,7 @@ package ui.impl;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import ui.TableUtils;
-import utils.elements.WebElementsUtils;
+import utils.elementsutils.WebElementsGetter;
 
 import java.util.List;
 
@@ -18,6 +18,6 @@ public class WAIARIADynamicTableUtils implements TableUtils {
 
     @Override
     public WebElement getElementFromTableByRowNameAndColumnId(String name, int columnId) {
-        return WebElementsUtils.getElementWithWaiter(By.xpath(String.format(searchedElementLocatorWith, name, columnId)));
+        return WebElementsGetter.getElementWithWaiter(By.xpath(String.format(searchedElementLocatorWith, name, columnId)));
     }
 }

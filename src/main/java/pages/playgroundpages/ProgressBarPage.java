@@ -2,7 +2,7 @@ package pages.playgroundpages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import utils.elements.WebElementsUtils;
+import utils.elementsutils.WebElementsGetter;
 
 public class ProgressBarPage {
     private static final By startButtonLocator = By.xpath("//button[@class='btn btn-primary btn-test']");
@@ -16,11 +16,11 @@ public class ProgressBarPage {
 
     public void stopOnNPercent() {
         String percent = REQUIRED_PERCENT + "%";
-        startButton = WebElementsUtils.getElementWithWaiter(startButtonLocator);
-        stopButton = WebElementsUtils.getElementWithWaiter(stopButtonLocator);
+        startButton = WebElementsGetter.getElementWithWaiter(startButtonLocator);
+        stopButton = WebElementsGetter.getElementWithWaiter(stopButtonLocator);
         startButton.click();
         for (; ; ) {
-            progressBar = WebElementsUtils.getElementWithWaiter(progressBarLocator);
+            progressBar = WebElementsGetter.getElementWithWaiter(progressBarLocator);
             if (progressBar.getText().equals(percent)) {
                 stopButton.click();
                 break;

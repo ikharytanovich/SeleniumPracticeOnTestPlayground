@@ -2,7 +2,7 @@ package pages.playgroundpages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import utils.elements.WebElementsUtils;
+import utils.elementsutils.WebElementsGetter;
 
 public class DynamicIdPage {
     private static final By dynamicIdLocator = new By.ByXPath("//button[@class='btn btn-primary']");
@@ -10,7 +10,7 @@ public class DynamicIdPage {
     private WebElement button;
 
     public void clickOnButton() {
-        button = WebElementsUtils.getElementWithWaiter(dynamicIdLocator);
+        button = WebElementsGetter.getElementWithWaiter(dynamicIdLocator);
         button.click();
     }
 }

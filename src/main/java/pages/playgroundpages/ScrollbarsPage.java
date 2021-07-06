@@ -4,8 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import utils.driversutils.DriverThreadLocal;
-import utils.elements.WebElementsUtils;
+import utils.driversutils.ThreadLocalDriver;
+import utils.elementsutils.WebElementsGetter;
 
 public class ScrollbarsPage {
     private static final By containerWithButtonLocator = By.xpath("//div[@style='height:150px;overflow-y: scroll;width:300px;overflow-x:scroll']");
@@ -19,11 +19,11 @@ public class ScrollbarsPage {
 
     //TODO
     public void clickOnButton() {
-        containerWithButton = WebElementsUtils.getElementWithWaiter(containerWithButtonLocator);
+        containerWithButton = WebElementsGetter.getElementWithWaiter(containerWithButtonLocator);
         containerWithButton.click();
-        actionsInContainer = new Actions(DriverThreadLocal.getDriver());
+        actionsInContainer = new Actions(ThreadLocalDriver.getDriver());
         actionsInContainer.sendKeys(keys);
-        button = WebElementsUtils.getElementWithWaiter(buttonLocator);
+        button = WebElementsGetter.getElementWithWaiter(buttonLocator);
         button.click();
     }
 }

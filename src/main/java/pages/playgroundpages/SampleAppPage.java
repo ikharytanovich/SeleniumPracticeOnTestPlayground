@@ -2,7 +2,7 @@ package pages.playgroundpages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import utils.elements.WebElementsUtils;
+import utils.elementsutils.WebElementsGetter;
 
 public class SampleAppPage {
     private static final By userNameFieldLocator = By.xpath("//input[@name='UserName']");
@@ -16,9 +16,9 @@ public class SampleAppPage {
     private WebElement button;
 
     public void login() {
-        userNameField = WebElementsUtils.getElementWithWaiter(userNameFieldLocator);
-        passwordField = WebElementsUtils.getElementWithWaiter(passwordFieldLocator);
-        button = WebElementsUtils.getElementWithWaiter(buttonLocator);
+        userNameField = WebElementsGetter.getElementWithWaiter(userNameFieldLocator);
+        passwordField = WebElementsGetter.getElementWithWaiter(passwordFieldLocator);
+        button = WebElementsGetter.getElementWithWaiter(buttonLocator);
         userNameField.sendKeys(userNameValue);
         passwordField.sendKeys(passwordValue);
         button.click();

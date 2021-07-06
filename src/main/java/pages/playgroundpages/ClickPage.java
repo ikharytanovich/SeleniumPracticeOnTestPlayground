@@ -2,7 +2,7 @@ package pages.playgroundpages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import utils.elements.WebElementsUtils;
+import utils.elementsutils.WebElementsGetter;
 
 public class ClickPage {
     private static final By blueButtonLocator = By.xpath("//button[@class='btn btn-primary']");
@@ -12,9 +12,9 @@ public class ClickPage {
     private WebElement greenButton;
 
     public Boolean isButtonGreenAfterClickBlue() {
-        blueButton = WebElementsUtils.getElementWithWaiter(blueButtonLocator);
+        blueButton = WebElementsGetter.getElementWithWaiter(blueButtonLocator);
         blueButton.click();
-        greenButton = WebElementsUtils.getElementWithWaiter(greenButtonLocator);
+        greenButton = WebElementsGetter.getElementWithWaiter(greenButtonLocator);
         return greenButton.isDisplayed();
     }
 }

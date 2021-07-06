@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import ui.TableUtils;
 import ui.impl.WAIARIADynamicTableUtils;
-import utils.elements.WebElementsUtils;
+import utils.elementsutils.WebElementsGetter;
 
 import java.util.List;
 
@@ -21,10 +21,10 @@ public class DynamicTablePage {
     private int idOfColumn;
 
     public Boolean isCorrect() {
-        headers = WebElementsUtils.getElementsWithWaiter(headersLocator);
+        headers = WebElementsGetter.getElementsWithWaiter(headersLocator);
         idOfColumn = dynamicTableUtils.getHeaderId(headers, headerName);
         searchedElement = dynamicTableUtils.getElementFromTableByRowNameAndColumnId(rowName, idOfColumn);
-        elementWithExpectedValue = WebElementsUtils.getElementWithWaiter(expectedValueLocator);
+        elementWithExpectedValue = WebElementsGetter.getElementWithWaiter(expectedValueLocator);
         return getPureResultFromElement(elementWithExpectedValue).equals(searchedElement.getText());
     }
 

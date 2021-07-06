@@ -2,7 +2,7 @@ package pages.playgroundpages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import utils.elements.WebElementsUtils;
+import utils.elementsutils.WebElementsGetter;
 
 public class AJAXDataPage {
     private static final By buttonLocator = By.xpath("//button[@class='btn btn-primary']");
@@ -12,9 +12,9 @@ public class AJAXDataPage {
     private WebElement dataField;
 
     public Boolean isDataDisplayedAfterButtonClick() {
-        button = WebElementsUtils.getElementWithWaiter(buttonLocator);
+        button = WebElementsGetter.getElementWithWaiter(buttonLocator);
         button.click();
-        dataField = WebElementsUtils.getElementWithWaiter(dataFieldLocator);
+        dataField = WebElementsGetter.getElementWithWaiter(dataFieldLocator);
         return dataField.isDisplayed();
     }
 }

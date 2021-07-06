@@ -1,8 +1,8 @@
-package utils.elements;
+package utils.elementsutils;
 
 import org.openqa.selenium.*;
 
-public class ElementVisibilityUtil {
+public class WebElementVisibilityValidator {
     private static final String WIDTH = "width";
     private static final String HEIGHT = "height";
     private static final String TOP = "top";

@@ -2,7 +2,7 @@ package pages.playgroundpages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import utils.elements.WebElementsUtils;
+import utils.elementsutils.WebElementsGetter;
 
 public class TextPage {
     private static final By inputFieldLocator = new By.ByXPath("//input[@class='form-control']");
@@ -13,9 +13,9 @@ public class TextPage {
     private WebElement button;
 
     public Boolean inputTextAndCheckIsButtonChangedValue() {
-        inputField = WebElementsUtils.getElementWithWaiter(inputFieldLocator);
+        inputField = WebElementsGetter.getElementWithWaiter(inputFieldLocator);
         inputField.sendKeys(input);
-        button = WebElementsUtils.getElementWithWaiter(buttonLocator);
+        button = WebElementsGetter.getElementWithWaiter(buttonLocator);
         button.click();
         return button.getText().equals(input);
     }

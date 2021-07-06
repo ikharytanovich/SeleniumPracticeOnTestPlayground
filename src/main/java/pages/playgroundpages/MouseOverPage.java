@@ -2,7 +2,7 @@ package pages.playgroundpages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import utils.elements.WebElementsUtils;
+import utils.elementsutils.WebElementsGetter;
 
 public class MouseOverPage {
     private static final By linkToClickLocator = By.xpath("//div/a[@class]");
@@ -14,10 +14,10 @@ public class MouseOverPage {
 
     public Boolean getCountOfClicks() {
         for (int i = 0; i < TIMES_TO_PRESS_LINK; i++) {
-            link = WebElementsUtils.getElementWithWaiter(linkToClickLocator);
+            link = WebElementsGetter.getElementWithWaiter(linkToClickLocator);
             link.click();
         }
-        result = WebElementsUtils.getElementWithWaiter(resultLocator);
+        result = WebElementsGetter.getElementWithWaiter(resultLocator);
         return Integer.parseInt(result.getText()) == TIMES_TO_PRESS_LINK;
     }
 }

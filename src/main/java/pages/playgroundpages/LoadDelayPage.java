@@ -2,7 +2,7 @@ package pages.playgroundpages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import utils.elements.WebElementsUtils;
+import utils.elementsutils.WebElementsGetter;
 
 public class LoadDelayPage {
     private static final By buttonLocator = By.xpath("//button[@class='btn btn-primary']");
@@ -10,7 +10,7 @@ public class LoadDelayPage {
     private WebElement button;
 
     public Boolean isButtonDisplayed() {
-        button = WebElementsUtils.getElementWithWaiter(buttonLocator);
+        button = WebElementsGetter.getElementWithWaiter(buttonLocator);
         return button.isDisplayed();
     }
 }

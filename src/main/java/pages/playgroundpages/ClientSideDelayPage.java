@@ -2,7 +2,7 @@ package pages.playgroundpages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import utils.elements.WebElementsUtils;
+import utils.elementsutils.WebElementsGetter;
 
 public class ClientSideDelayPage {
     private static final By buttonLocator = By.xpath("//button[@class='btn btn-primary']");
@@ -12,13 +12,13 @@ public class ClientSideDelayPage {
     private WebElement text;
 
     public ClientSideDelayPage clickOnButton() {
-        button = WebElementsUtils.getElementWithWaiter(buttonLocator);
+        button = WebElementsGetter.getElementWithWaiter(buttonLocator);
         button.click();
         return this;
     }
 
     public boolean isTextAppeared() {
-        text = WebElementsUtils.getElementWithWaiter(textLocator);
+        text = WebElementsGetter.getElementWithWaiter(textLocator);
         return text.isDisplayed();
     }
 }

@@ -4,7 +4,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import pages.MainPage;
-import utils.driversutils.DriverThreadLocal;
+import utils.driversutils.ThreadLocalDriver;
 
 public class BaseTest {
     protected MainPage mainPage;
@@ -21,6 +21,6 @@ public class BaseTest {
 
     @AfterClass
     public void afterClass() {
-        DriverThreadLocal.closeDriver();
+        ThreadLocalDriver.closeDriver();
     }
 }

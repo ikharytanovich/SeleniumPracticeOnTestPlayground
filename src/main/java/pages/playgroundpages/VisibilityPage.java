@@ -2,8 +2,8 @@ package pages.playgroundpages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import utils.elements.ElementVisibilityUtil;
-import utils.elements.WebElementsUtils;
+import utils.elementsutils.WebElementVisibilityValidator;
+import utils.elementsutils.WebElementsGetter;
 
 import java.util.Arrays;
 import java.util.List;
@@ -28,20 +28,20 @@ public class VisibilityPage {
     private WebElement offScreenButton;
 
     public void isEnable() {
-        hideButton = WebElementsUtils.getElementWithWaiter(hideButtonLocator);
+        hideButton = WebElementsGetter.getElementWithWaiter(hideButtonLocator);
         List<WebElement> buttons = setUpVisibilityButtons();
         hideButton.click();
-        buttons.forEach(ElementVisibilityUtil::isVisible);
+        buttons.forEach(WebElementVisibilityValidator::isVisible);
     }
 
     private List<WebElement> setUpVisibilityButtons() {
-        removedButton = WebElementsUtils.getElementWithWaiter(removedButtonLocator);
-        zeroWidthButton = WebElementsUtils.getElementWithWaiter(zeroWidthButtonLocator);
-        overlappedButton = WebElementsUtils.getElementWithWaiter(overlappedButtonLocator);
-        transparentButton = WebElementsUtils.getElementWithWaiter(transparentButtonLocator);
-        invisibleButton = WebElementsUtils.getElementWithWaiter(invisibleButtonLocator);
-        notDisplayedButton = WebElementsUtils.getElementWithWaiter(notDisplayedButtonLocator);
-        offScreenButton = WebElementsUtils.getElementWithWaiter(offScreenButtonLocator);
+        removedButton = WebElementsGetter.getElementWithWaiter(removedButtonLocator);
+        zeroWidthButton = WebElementsGetter.getElementWithWaiter(zeroWidthButtonLocator);
+        overlappedButton = WebElementsGetter.getElementWithWaiter(overlappedButtonLocator);
+        transparentButton = WebElementsGetter.getElementWithWaiter(transparentButtonLocator);
+        invisibleButton = WebElementsGetter.getElementWithWaiter(invisibleButtonLocator);
+        notDisplayedButton = WebElementsGetter.getElementWithWaiter(notDisplayedButtonLocator);
+        offScreenButton = WebElementsGetter.getElementWithWaiter(offScreenButtonLocator);
         return Arrays.asList
                 (removedButton, zeroWidthButton, overlappedButton, transparentButton, invisibleButton, notDisplayedButton, offScreenButton);
     }
