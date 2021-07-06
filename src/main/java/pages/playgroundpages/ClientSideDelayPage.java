@@ -12,13 +12,13 @@ public class ClientSideDelayPage {
     private WebElement text;
 
     public ClientSideDelayPage clickOnButton() {
-        button = WebElementsGetter.getElementWithWaiter(buttonLocator);
+        button = WebElementsGetter.getElementWithLocatedCondition(buttonLocator);
         button.click();
         return this;
     }
 
     public boolean isTextAppeared() {
-        text = WebElementsGetter.getElementWithWaiter(textLocator);
+        text = WebElementsGetter.getElementWithLocatedCondition(textLocator);
         return text.isDisplayed();
     }
 }

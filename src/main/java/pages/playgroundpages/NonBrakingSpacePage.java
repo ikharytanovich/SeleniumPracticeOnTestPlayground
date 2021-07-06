@@ -10,7 +10,7 @@ public class NonBrakingSpacePage {
     private WebElement button;
 
     public void click() {
-        button = WebElementsGetter.getElementWithWaiter(buttonLocator);
+        button = WebElementsGetter.getElementWithLocatedCondition(buttonLocator);
         button.click();
     }
 }

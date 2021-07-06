@@ -12,9 +12,9 @@ public class ClickPage {
     private WebElement greenButton;
 
     public Boolean isButtonGreenAfterClickBlue() {
-        blueButton = WebElementsGetter.getElementWithWaiter(blueButtonLocator);
+        blueButton = WebElementsGetter.getElementWithLocatedCondition(blueButtonLocator);
         blueButton.click();
-        greenButton = WebElementsGetter.getElementWithWaiter(greenButtonLocator);
+        greenButton = WebElementsGetter.getElementWithLocatedCondition(greenButtonLocator);
         return greenButton.isDisplayed();
     }
 }

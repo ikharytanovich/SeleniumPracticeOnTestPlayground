@@ -18,6 +18,6 @@ public class WAIARIADynamicTableUtils implements TableUtils {
 
     @Override
     public WebElement getElementFromTableByRowNameAndColumnId(String name, int columnId) {
-        return WebElementsGetter.getElementWithWaiter(By.xpath(String.format(searchedElementLocatorWith, name, columnId)));
+        return WebElementsGetter.getElementWithLocatedCondition(By.xpath(String.format(searchedElementLocatorWith, name, columnId)));
     }
 }

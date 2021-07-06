@@ -16,9 +16,9 @@ public class SampleAppPage {
     private WebElement button;
 
     public void login() {
-        userNameField = WebElementsGetter.getElementWithWaiter(userNameFieldLocator);
-        passwordField = WebElementsGetter.getElementWithWaiter(passwordFieldLocator);
-        button = WebElementsGetter.getElementWithWaiter(buttonLocator);
+        userNameField = WebElementsGetter.getElementWithLocatedCondition(userNameFieldLocator);
+        passwordField = WebElementsGetter.getElementWithLocatedCondition(passwordFieldLocator);
+        button = WebElementsGetter.getElementWithLocatedCondition(buttonLocator);
         userNameField.sendKeys(userNameValue);
         passwordField.sendKeys(passwordValue);
         button.click();

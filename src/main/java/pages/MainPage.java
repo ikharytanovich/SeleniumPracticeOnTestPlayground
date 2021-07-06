@@ -16,6 +16,6 @@ public class MainPage {
     }
 
     private void clickOnLinkToRedirect(By by) {
-        WebElementsGetter.getElementWithWaiter(by).click();
+        WebElementsGetter.getElementWithLocatedCondition(by).click();
     }
 }

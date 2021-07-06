@@ -14,10 +14,10 @@ public class MouseOverPage {
 
     public Boolean getCountOfClicks() {
         for (int i = 0; i < TIMES_TO_PRESS_LINK; i++) {
-            link = WebElementsGetter.getElementWithWaiter(linkToClickLocator);
+            link = WebElementsGetter.getElementWithLocatedCondition(linkToClickLocator);
             link.click();
         }
-        result = WebElementsGetter.getElementWithWaiter(resultLocator);
+        result = WebElementsGetter.getElementWithLocatedCondition(resultLocator);
         return Integer.parseInt(result.getText()) == TIMES_TO_PRESS_LINK;
     }
 }

@@ -10,7 +10,7 @@ public class DynamicIdPage {
     private WebElement button;
 
     public void clickOnButton() {
-        button = WebElementsGetter.getElementWithWaiter(dynamicIdLocator);
+        button = WebElementsGetter.getElementWithLocatedCondition(dynamicIdLocator);
         button.click();
     }
 }

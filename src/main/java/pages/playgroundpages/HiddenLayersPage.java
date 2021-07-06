@@ -12,14 +12,14 @@ public class HiddenLayersPage {
     private WebElement greenButtonAfterClick;
 
     public HiddenLayersPage clickObButton() {
-        greenButtonBeforeClick = WebElementsGetter.getElementWithWaiter(greenButtonLocator);
+        greenButtonBeforeClick = WebElementsGetter.getElementWithLocatedCondition(greenButtonLocator);
         greenButtonBeforeClick.click();
         return this;
     }
 
     public Boolean isNotClickable() {
         Boolean result = false;
-        greenButtonAfterClick = WebElementsGetter.getElementWithWaiter(greenButtonLocator);
+        greenButtonAfterClick = WebElementsGetter.getElementWithLocatedCondition(greenButtonLocator);
         try {
             greenButtonAfterClick.click();
         } catch (ElementClickInterceptedException exception) {

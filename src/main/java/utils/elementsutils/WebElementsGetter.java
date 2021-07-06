@@ -11,22 +11,22 @@ import java.util.List;
 public class WebElementsGetter {
     private final static int DEFAULT_WAIT_TIME = 45;
 
-    public static WebElement getElementWithWaiter(By by) {
+    public static WebElement getElementWithLocatedCondition(By by) {
         return new WebDriverWait(ThreadLocalDriver.getDriver(), DEFAULT_WAIT_TIME)
                 .until(ExpectedConditions.presenceOfElementLocated(by));
     }
 
-    public static WebElement getElementWithWaiter(By by, int time) {
+    public static WebElement getElementWithLocatedCondition(By by, int time) {
         return new WebDriverWait(ThreadLocalDriver.getDriver(), time)
                 .until(ExpectedConditions.presenceOfElementLocated(by));
     }
 
-    public static List<WebElement> getElementsWithWaiter(By by) {
+    public static List<WebElement> getElementsWithLocatedCondition(By by) {
         return new WebDriverWait(ThreadLocalDriver.getDriver(), DEFAULT_WAIT_TIME)
                 .until(ExpectedConditions.presenceOfAllElementsLocatedBy(by));
     }
 
-    public static List<WebElement> getElementsWithWaiter(By by, int time) {
+    public static List<WebElement> getElementsWithLocatedCondition(By by, int time) {
         return new WebDriverWait(ThreadLocalDriver.getDriver(), time)
                 .until(ExpectedConditions.presenceOfAllElementsLocatedBy(by));
     }

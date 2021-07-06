@@ -12,9 +12,9 @@ public class AJAXDataPage {
     private WebElement dataField;
 
     public Boolean isDataDisplayedAfterButtonClick() {
-        button = WebElementsGetter.getElementWithWaiter(buttonLocator);
+        button = WebElementsGetter.getElementWithLocatedCondition(buttonLocator);
         button.click();
-        dataField = WebElementsGetter.getElementWithWaiter(dataFieldLocator);
+        dataField = WebElementsGetter.getElementWithLocatedCondition(dataFieldLocator);
         return dataField.isDisplayed();
     }
 }

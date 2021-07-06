@@ -21,10 +21,10 @@ public class DynamicTablePage {
     private int idOfColumn;
 
     public Boolean isCorrect() {
-        headers = WebElementsGetter.getElementsWithWaiter(headersLocator);
+        headers = WebElementsGetter.getElementsWithLocatedCondition(headersLocator);
         idOfColumn = dynamicTableUtils.getHeaderId(headers, headerName);
         searchedElement = dynamicTableUtils.getElementFromTableByRowNameAndColumnId(rowName, idOfColumn);
-        elementWithExpectedValue = WebElementsGetter.getElementWithWaiter(expectedValueLocator);
+        elementWithExpectedValue = WebElementsGetter.getElementWithLocatedCondition(expectedValueLocator);
         return getPureResultFromElement(elementWithExpectedValue).equals(searchedElement.getText());
     }
 

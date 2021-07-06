@@ -16,11 +16,11 @@ public class ProgressBarPage {
 
     public void stopOnNPercent() {
         String percent = REQUIRED_PERCENT + "%";
-        startButton = WebElementsGetter.getElementWithWaiter(startButtonLocator);
-        stopButton = WebElementsGetter.getElementWithWaiter(stopButtonLocator);
+        startButton = WebElementsGetter.getElementWithLocatedCondition(startButtonLocator);
+        stopButton = WebElementsGetter.getElementWithLocatedCondition(stopButtonLocator);
         startButton.click();
         for (; ; ) {
-            progressBar = WebElementsGetter.getElementWithWaiter(progressBarLocator);
+            progressBar = WebElementsGetter.getElementWithLocatedCondition(progressBarLocator);
             if (progressBar.getText().equals(percent)) {
                 stopButton.click();
                 break;

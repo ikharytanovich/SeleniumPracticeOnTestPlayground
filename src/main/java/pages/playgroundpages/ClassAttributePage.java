@@ -13,7 +13,7 @@ public class ClassAttributePage {
     private Alert pageAlert;
 
     public ClassAttributePage clickOnBlueButton() {
-        blueButton = WebElementsGetter.getElementWithWaiter(blueButtonLocator);
+        blueButton = WebElementsGetter.getElementWithLocatedCondition(blueButtonLocator);
         blueButton.click();
         return this;
     }

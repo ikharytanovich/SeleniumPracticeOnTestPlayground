@@ -28,20 +28,20 @@ public class VisibilityPage {
     private WebElement offScreenButton;
 
     public void isEnable() {
-        hideButton = WebElementsGetter.getElementWithWaiter(hideButtonLocator);
+        hideButton = WebElementsGetter.getElementWithLocatedCondition(hideButtonLocator);
         List<WebElement> buttons = setUpVisibilityButtons();
         hideButton.click();
         buttons.forEach(WebElementVisibilityValidator::isVisible);
     }
 
     private List<WebElement> setUpVisibilityButtons() {
-        removedButton = WebElementsGetter.getElementWithWaiter(removedButtonLocator);
-        zeroWidthButton = WebElementsGetter.getElementWithWaiter(zeroWidthButtonLocator);
-        overlappedButton = WebElementsGetter.getElementWithWaiter(overlappedButtonLocator);
-        transparentButton = WebElementsGetter.getElementWithWaiter(transparentButtonLocator);
-        invisibleButton = WebElementsGetter.getElementWithWaiter(invisibleButtonLocator);
-        notDisplayedButton = WebElementsGetter.getElementWithWaiter(notDisplayedButtonLocator);
-        offScreenButton = WebElementsGetter.getElementWithWaiter(offScreenButtonLocator);
+        removedButton = WebElementsGetter.getElementWithLocatedCondition(removedButtonLocator);
+        zeroWidthButton = WebElementsGetter.getElementWithLocatedCondition(zeroWidthButtonLocator);
+        overlappedButton = WebElementsGetter.getElementWithLocatedCondition(overlappedButtonLocator);
+        transparentButton = WebElementsGetter.getElementWithLocatedCondition(transparentButtonLocator);
+        invisibleButton = WebElementsGetter.getElementWithLocatedCondition(invisibleButtonLocator);
+        notDisplayedButton = WebElementsGetter.getElementWithLocatedCondition(notDisplayedButtonLocator);
+        offScreenButton = WebElementsGetter.getElementWithLocatedCondition(offScreenButtonLocator);
         return Arrays.asList
                 (removedButton, zeroWidthButton, overlappedButton, transparentButton, invisibleButton, notDisplayedButton, offScreenButton);
     }

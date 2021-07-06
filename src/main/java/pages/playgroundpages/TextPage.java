@@ -13,9 +13,9 @@ public class TextPage {
     private WebElement button;
 
     public Boolean inputTextAndCheckIsButtonChangedValue() {
-        inputField = WebElementsGetter.getElementWithWaiter(inputFieldLocator);
+        inputField = WebElementsGetter.getElementWithLocatedCondition(inputFieldLocator);
         inputField.sendKeys(input);
-        button = WebElementsGetter.getElementWithWaiter(buttonLocator);
+        button = WebElementsGetter.getElementWithLocatedCondition(buttonLocator);
         button.click();
         return button.getText().equals(input);
     }

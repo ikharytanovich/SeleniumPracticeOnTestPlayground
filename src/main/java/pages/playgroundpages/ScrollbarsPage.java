@@ -19,11 +19,11 @@ public class ScrollbarsPage {
 
     //TODO
     public void clickOnButton() {
-        containerWithButton = WebElementsGetter.getElementWithWaiter(containerWithButtonLocator);
+        containerWithButton = WebElementsGetter.getElementWithLocatedCondition(containerWithButtonLocator);
         containerWithButton.click();
         actionsInContainer = new Actions(ThreadLocalDriver.getDriver());
         actionsInContainer.sendKeys(keys);
-        button = WebElementsGetter.getElementWithWaiter(buttonLocator);
+        button = WebElementsGetter.getElementWithLocatedCondition(buttonLocator);
         button.click();
     }
 }

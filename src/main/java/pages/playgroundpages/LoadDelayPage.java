@@ -10,7 +10,7 @@ public class LoadDelayPage {
     private WebElement button;
 
     public Boolean isButtonDisplayed() {
-        button = WebElementsGetter.getElementWithWaiter(buttonLocator);
+        button = WebElementsGetter.getElementWithLocatedCondition(buttonLocator);
         return button.isDisplayed();
     }
 }
