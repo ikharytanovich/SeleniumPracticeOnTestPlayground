@@ -12,7 +12,7 @@ public class TextPageTest extends BaseTest {
     private TextPage textPage = new TextPage();
 
     @Test
-    public void testName() {
+    public void test() {
         mainPage.moveTo(PageLink.TextPage);
         Assert.assertTrue(textPage.inputTextAndCheckIsButtonChangedValue());
     }

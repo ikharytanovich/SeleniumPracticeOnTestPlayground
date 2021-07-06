@@ -12,7 +12,7 @@ public class MouseOverPageTest extends BaseTest {
     private MouseOverPage mouseOverPage = new MouseOverPage();
 
     @Test
-    public void testName() {
+    public void test() {
         mainPage.moveTo(PageLink.MouseOverPage);
         Assert.assertTrue(mouseOverPage.getCountOfClicks());
     }
