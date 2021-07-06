@@ -8,7 +8,7 @@ import tests.BaseTest;
 
 @Epic("Playground")
 public class ClassAttributeTest extends BaseTest {
-    private ClassAttributePage classAttributePage = new ClassAttributePage();
+    private final ClassAttributePage classAttributePage = new ClassAttributePage();
 
     @Test
     public void test() {

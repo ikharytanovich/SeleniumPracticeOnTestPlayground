@@ -8,7 +8,7 @@ import tests.BaseTest;
 
 @Epic("Playground")
 public class SampleAppTest extends BaseTest {
-    private SampleAppPage sampleAppPage = new SampleAppPage();
+    private final SampleAppPage sampleAppPage = new SampleAppPage();
 
     @Test
     public void test() {

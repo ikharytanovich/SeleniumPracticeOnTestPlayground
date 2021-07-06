@@ -9,7 +9,7 @@ import tests.BaseTest;
 
 @Epic("Playground")
 public class MouseOverPageTest extends BaseTest {
-    private MouseOverPage mouseOverPage = new MouseOverPage();
+    private final MouseOverPage mouseOverPage = new MouseOverPage();
 
     @Test
     public void test() {

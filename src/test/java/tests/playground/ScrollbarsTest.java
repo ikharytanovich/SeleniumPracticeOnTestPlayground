@@ -8,7 +8,7 @@ import tests.BaseTest;
 
 @Epic("Playground")
 public class ScrollbarsTest extends BaseTest {
-    private ScrollbarsPage scrollbarsPage = new ScrollbarsPage();
+    private final ScrollbarsPage scrollbarsPage = new ScrollbarsPage();
 
     @Test
     public void test() {

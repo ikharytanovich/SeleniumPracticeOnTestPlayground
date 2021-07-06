@@ -12,7 +12,6 @@ public class VerifyTextPage {
 
     public boolean isVerified() {
         elementWithText = WebElementsGetter.getElementWithWaiter(elementWithTextLocator);
-        System.out.println(elementWithText.getText().trim());
         return elementWithText.getText().trim().equals(expectedValue);
     }
 }

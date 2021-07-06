@@ -9,7 +9,7 @@ import tests.BaseTest;
 
 @Epic("Playground")
 public class AJAXDataTest extends BaseTest {
-    private AJAXDataPage ajaxDataPage = new AJAXDataPage();
+    private final AJAXDataPage ajaxDataPage = new AJAXDataPage();
 
     @Test
     public void test() {

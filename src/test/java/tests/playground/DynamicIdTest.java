@@ -8,7 +8,7 @@ import tests.BaseTest;
 
 @Epic("Playground")
 public class DynamicIdTest extends BaseTest {
-    private DynamicIdPage dynamicIdPage = new DynamicIdPage();
+    private final DynamicIdPage dynamicIdPage = new DynamicIdPage();
 
     @Test
     public void test() {

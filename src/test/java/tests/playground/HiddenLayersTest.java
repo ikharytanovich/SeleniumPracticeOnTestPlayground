@@ -9,7 +9,7 @@ import tests.BaseTest;
 
 @Epic("Playground")
 public class HiddenLayersTest extends BaseTest {
-    private HiddenLayersPage hiddenLayersPage = new HiddenLayersPage();
+    private final HiddenLayersPage hiddenLayersPage = new HiddenLayersPage();
 
     @Test
     public void test() {

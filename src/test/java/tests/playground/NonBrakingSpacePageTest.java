@@ -8,7 +8,7 @@ import tests.BaseTest;
 
 @Epic("Playground")
 public class NonBrakingSpacePageTest extends BaseTest {
-    private NonBrakingSpacePage nonBrakingSpacePage = new NonBrakingSpacePage();
+    private final NonBrakingSpacePage nonBrakingSpacePage = new NonBrakingSpacePage();
 
     @Test
     public void test() {

@@ -9,7 +9,7 @@ import tests.BaseTest;
 
 @Epic("Playground")
 public class DynamicTableTest extends BaseTest {
-    private DynamicTablePage dynamicTablePage = new DynamicTablePage();
+    private final DynamicTablePage dynamicTablePage = new DynamicTablePage();
 
     @Test
     public void test() {

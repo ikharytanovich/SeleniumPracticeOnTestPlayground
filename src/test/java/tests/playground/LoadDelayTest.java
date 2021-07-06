@@ -9,7 +9,7 @@ import tests.BaseTest;
 
 @Epic("Playground")
 public class LoadDelayTest extends BaseTest {
-    private LoadDelayPage loadDelayPage = new LoadDelayPage();
+    private final LoadDelayPage loadDelayPage = new LoadDelayPage();
 
     @Test
     public void test() {

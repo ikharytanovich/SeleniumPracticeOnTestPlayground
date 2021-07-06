@@ -9,7 +9,7 @@ import tests.BaseTest;
 
 @Epic("Playground")
 public class TextPageTest extends BaseTest {
-    private TextPage textPage = new TextPage();
+    private final TextPage textPage = new TextPage();
 
     @Test
     public void test() {

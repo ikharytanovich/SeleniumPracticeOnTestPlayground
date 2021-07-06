@@ -8,7 +8,7 @@ import tests.BaseTest;
 
 @Epic("Playground")
 public class ProgressBarTest extends BaseTest {
-    private ProgressBarPage progressBarPage = new ProgressBarPage();
+    private final ProgressBarPage progressBarPage = new ProgressBarPage();
 
     @Test
     public void test() {

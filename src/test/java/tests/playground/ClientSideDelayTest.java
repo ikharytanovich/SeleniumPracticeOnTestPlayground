@@ -9,7 +9,7 @@ import tests.BaseTest;
 
 @Epic("Playground")
 public class ClientSideDelayTest extends BaseTest {
-    private ClientSideDelayPage clientSideDelayPage = new ClientSideDelayPage();
+    private final ClientSideDelayPage clientSideDelayPage = new ClientSideDelayPage();
 
     @Test
     public void test() {

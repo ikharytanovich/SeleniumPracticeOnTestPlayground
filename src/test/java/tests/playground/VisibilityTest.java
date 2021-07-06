@@ -8,7 +8,7 @@ import tests.BaseTest;
 
 @Epic("Playground")
 public class VisibilityTest extends BaseTest {
-    private VisibilityPage visibilityPage = new VisibilityPage();
+    private final VisibilityPage visibilityPage = new VisibilityPage();
 
     @Test
     public void test() {
