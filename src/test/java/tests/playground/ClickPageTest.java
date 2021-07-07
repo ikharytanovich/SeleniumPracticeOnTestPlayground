@@ -5,7 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import tests.BaseTest;
 
-import static constants.PageLinkLocator.CLICK_PAGE;
+import static pages.MainPage.CLICK_PAGE;
 import static utils.pagesutils.IPageFactory.clickPage;
 import static utils.pagesutils.IPageFactory.mainPage;
 

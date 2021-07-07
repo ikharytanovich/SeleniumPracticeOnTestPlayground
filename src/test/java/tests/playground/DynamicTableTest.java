@@ -7,7 +7,7 @@ import tests.BaseTest;
 
 import static constants.ConstantsForPages.DYNAMIC_TABLE_HEADER_NAME;
 import static constants.ConstantsForPages.DYNAMIC_TABLE_ROW_NAME;
-import static constants.PageLinkLocator.DYNAMIC_TABLE;
+import static pages.MainPage.DYNAMIC_TABLE;
 import static utils.pagesutils.IPageFactory.dynamicTablePage;
 import static utils.pagesutils.IPageFactory.mainPage;
 

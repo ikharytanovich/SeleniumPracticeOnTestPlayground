@@ -6,7 +6,7 @@ import tests.BaseTest;
 
 import static constants.ConstantsForPages.PASSWORD_VALUE;
 import static constants.ConstantsForPages.USER_NAME_VALUE;
-import static constants.PageLinkLocator.SAMPLE_APP;
+import static pages.MainPage.SAMPLE_APP;
 import static utils.pagesutils.IPageFactory.mainPage;
 import static utils.pagesutils.IPageFactory.sampleAppPage;
 

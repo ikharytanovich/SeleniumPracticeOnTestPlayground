@@ -5,7 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import tests.BaseTest;
 
-import static constants.PageLinkLocator.HIDDEN_LAYERS;
+import static pages.MainPage.HIDDEN_LAYERS;
 import static utils.pagesutils.IPageFactory.hiddenLayersPage;
 import static utils.pagesutils.IPageFactory.mainPage;
 

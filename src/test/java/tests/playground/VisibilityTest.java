@@ -5,7 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import tests.BaseTest;
 
-import static constants.PageLinkLocator.VISIBILITY;
+import static pages.MainPage.VISIBILITY;
 import static utils.pagesutils.IPageFactory.mainPage;
 import static utils.pagesutils.IPageFactory.visibilityPage;
 

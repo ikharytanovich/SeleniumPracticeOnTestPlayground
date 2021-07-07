@@ -4,7 +4,7 @@ import io.qameta.allure.Epic;
 import org.testng.annotations.Test;
 import tests.BaseTest;
 
-import static constants.PageLinkLocator.SCROLL_BARS;
+import static pages.MainPage.SCROLL_BARS;
 import static utils.pagesutils.IPageFactory.mainPage;
 import static utils.pagesutils.IPageFactory.scrollbarsPage;
 

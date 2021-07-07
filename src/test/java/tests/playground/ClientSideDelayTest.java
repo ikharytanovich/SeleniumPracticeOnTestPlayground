@@ -5,7 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import tests.BaseTest;
 
-import static constants.PageLinkLocator.CLIENT_SIDE_DELAY;
+import static pages.MainPage.CLIENT_SIDE_DELAY;
 import static utils.pagesutils.IPageFactory.clientSideDelayPage;
 import static utils.pagesutils.IPageFactory.mainPage;
 

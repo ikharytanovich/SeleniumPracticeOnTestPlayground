@@ -1,5 +1,6 @@
 package pages.playgroundpages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import utils.elementsutils.WebElementsGetter;
@@ -7,10 +8,9 @@ import utils.elementsutils.WebElementsGetter;
 public class LoadDelayPage {
     private static final By buttonLocator = By.xpath("//button[@class='btn btn-primary']");
 
-    private WebElement button;
-
+    @Step("Verify that is button displayed")
     public Boolean isButtonDisplayed() {
-        button = WebElementsGetter.getElementWithLocatedCondition(buttonLocator);
+        WebElement button = WebElementsGetter.getElementWithLocatedCondition(buttonLocator);
         return button.isDisplayed();
     }
 }

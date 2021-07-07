@@ -3,9 +3,10 @@ package tests.playground;
 import io.qameta.allure.Epic;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.MainPage;
 import tests.BaseTest;
 
-import static constants.PageLinkLocator.AJAX_DATA;
+import static pages.MainPage.AJAX_DATA;
 import static utils.pagesutils.IPageFactory.ajaxDataPage;
 import static utils.pagesutils.IPageFactory.mainPage;
 

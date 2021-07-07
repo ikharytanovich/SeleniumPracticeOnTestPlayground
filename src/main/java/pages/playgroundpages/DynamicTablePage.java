@@ -1,5 +1,6 @@
 package pages.playgroundpages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import ui.TableUtils;
@@ -13,19 +14,16 @@ public class DynamicTablePage {
     private static final By headersLocator = By.xpath("//span[@role='columnheader']");
     private static final By expectedValueLocator = By.xpath("//p[@class='bg-warning']");
 
-    private List<WebElement> headers;
-    private WebElement searchedElement;
-    private WebElement elementWithExpectedValue;
-    private int idOfColumn;
-
+    @Step("Verify that {rowName} by header {headerName} is equals to field")
     public Boolean isCorrect(String headerName, String rowName) {
-        headers = WebElementsGetter.getElementsWithLocatedCondition(headersLocator);
-        idOfColumn = dynamicTableUtils.getHeaderId(headers, headerName);
-        searchedElement = dynamicTableUtils.getElementFromTableByRowNameAndColumnId(rowName, idOfColumn);
-        elementWithExpectedValue = WebElementsGetter.getElementWithLocatedCondition(expectedValueLocator);
+        List<WebElement> headers = WebElementsGetter.getElementsWithLocatedCondition(headersLocator);
+        int idOfColumn = dynamicTableUtils.getHeaderId(headers, headerName);
+        WebElement searchedElement = dynamicTableUtils.getElementFromTableByRowNameAndColumnId(rowName, idOfColumn);
+        WebElement elementWithExpectedValue = WebElementsGetter.getElementWithLocatedCondition(expectedValueLocator);
         return getPureResultFromElement(elementWithExpectedValue, headerName).equals(searchedElement.getText());
     }
 
+    @Step("Getting clean version of element text with header {headerName}")
     private String getPureResultFromElement(WebElement dirtyResult, String headerName) {
         String[] splitStrings = dirtyResult.getText().split(headerName + ": ");
         return splitStrings[1].trim();

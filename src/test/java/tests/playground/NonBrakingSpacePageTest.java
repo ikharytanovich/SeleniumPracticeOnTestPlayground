@@ -4,7 +4,7 @@ import io.qameta.allure.Epic;
 import org.testng.annotations.Test;
 import tests.BaseTest;
 
-import static constants.PageLinkLocator.NON_BRAKING_SPACE;
+import static pages.MainPage.NON_BRAKING_SPACE;
 import static utils.pagesutils.IPageFactory.mainPage;
 import static utils.pagesutils.IPageFactory.nonBrakingSpacePage;
 

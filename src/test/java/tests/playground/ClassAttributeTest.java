@@ -5,7 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import tests.BaseTest;
 
-import static constants.PageLinkLocator.CLASS_ATTRIBUTE;
+import static pages.MainPage.CLASS_ATTRIBUTE;
 import static utils.pagesutils.IPageFactory.classAttributePage;
 import static utils.pagesutils.IPageFactory.mainPage;
 

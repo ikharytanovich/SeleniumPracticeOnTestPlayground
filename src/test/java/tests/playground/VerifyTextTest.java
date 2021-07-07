@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import tests.BaseTest;
 
 import static constants.ConstantsForPages.EXPECTED_VALUE_FOR_VERIFY_TEXT_PAGE;
-import static constants.PageLinkLocator.VERIFY_TEXT;
+import static pages.MainPage.VERIFY_TEXT;
 import static utils.pagesutils.IPageFactory.mainPage;
 import static utils.pagesutils.IPageFactory.verifyTextPage;
 

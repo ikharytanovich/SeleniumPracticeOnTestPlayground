@@ -20,7 +20,7 @@ public class ThreadLocalDriver {
     }
 
     public static void closeDriver() {
-        localStorage.get().close();
+        localStorage.get().quit();
         localStorage.remove();
     }
 }

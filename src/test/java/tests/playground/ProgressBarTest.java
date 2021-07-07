@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 import tests.BaseTest;
 
 import static constants.ConstantsForPages.REQUIRED_PERCENT;
-import static constants.PageLinkLocator.PROGRESS_BAR;
+import static pages.MainPage.PROGRESS_BAR;
 import static utils.pagesutils.IPageFactory.mainPage;
 import static utils.pagesutils.IPageFactory.progressBarPage;
 

@@ -1,5 +1,6 @@
 package pages.playgroundpages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import utils.elementsutils.WebElementVisibilityValidator;
@@ -18,18 +19,10 @@ public class VisibilityPage {
     private static final By notDisplayedButtonLocator = By.xpath("//button[@id='notdisplayedButton']");
     private static final By offScreenButtonLocator = By.xpath("//button[@id='offscreenButton']");
 
-    private WebElement hideButton;
-    private WebElement removedButton;
-    private WebElement zeroWidthButton;
-    private WebElement overlappedButton;
-    private WebElement transparentButton;
-    private WebElement invisibleButton;
-    private WebElement notDisplayedButton;
-    private WebElement offScreenButton;
-
+    @Step("Verify that button invisible")
     public Boolean isInvisible() {
         Boolean result = true;
-        hideButton = WebElementsGetter.getElementWithLocatedCondition(hideButtonLocator);
+        WebElement hideButton = WebElementsGetter.getElementWithLocatedCondition(hideButtonLocator);
         List<WebElement> buttons = setUpVisibilityButtons();
         hideButton.click();
         for (WebElement element : buttons) {
@@ -40,14 +33,15 @@ public class VisibilityPage {
         return result;
     }
 
+    @Step("Setup buttons")
     private List<WebElement> setUpVisibilityButtons() {
-        removedButton = WebElementsGetter.getElementWithLocatedCondition(removedButtonLocator);
-        zeroWidthButton = WebElementsGetter.getElementWithLocatedCondition(zeroWidthButtonLocator);
-        overlappedButton = WebElementsGetter.getElementWithLocatedCondition(overlappedButtonLocator);
-        transparentButton = WebElementsGetter.getElementWithLocatedCondition(transparentButtonLocator);
-        invisibleButton = WebElementsGetter.getElementWithLocatedCondition(invisibleButtonLocator);
-        notDisplayedButton = WebElementsGetter.getElementWithLocatedCondition(notDisplayedButtonLocator);
-        offScreenButton = WebElementsGetter.getElementWithLocatedCondition(offScreenButtonLocator);
+        WebElement removedButton = WebElementsGetter.getElementWithLocatedCondition(removedButtonLocator);
+        WebElement zeroWidthButton = WebElementsGetter.getElementWithLocatedCondition(zeroWidthButtonLocator);
+        WebElement overlappedButton = WebElementsGetter.getElementWithLocatedCondition(overlappedButtonLocator);
+        WebElement transparentButton = WebElementsGetter.getElementWithLocatedCondition(transparentButtonLocator);
+        WebElement invisibleButton = WebElementsGetter.getElementWithLocatedCondition(invisibleButtonLocator);
+        WebElement notDisplayedButton = WebElementsGetter.getElementWithLocatedCondition(notDisplayedButtonLocator);
+        WebElement offScreenButton = WebElementsGetter.getElementWithLocatedCondition(offScreenButtonLocator);
         return Arrays.asList
                 (removedButton, zeroWidthButton, overlappedButton, transparentButton, invisibleButton, notDisplayedButton, offScreenButton);
     }

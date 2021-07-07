@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import tests.BaseTest;
 
 import static constants.ConstantsForPages.INPUT_FOR_TEXT_PAGE;
-import static constants.PageLinkLocator.TEXT_PAGE;
+import static pages.MainPage.TEXT_PAGE;
 import static utils.pagesutils.IPageFactory.mainPage;
 import static utils.pagesutils.IPageFactory.textPage;
 
