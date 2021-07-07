@@ -1,6 +1,7 @@
 package tests.playground;
 
 import io.qameta.allure.Epic;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import tests.BaseTest;
 
@@ -14,6 +15,6 @@ public class VisibilityTest extends BaseTest {
     @Test
     public void test() {
         mainPage.clickOnLinkToRedirect(VISIBILITY);
-        visibilityPage.isEnable();
+        Assert.assertTrue(visibilityPage.isInvisible());
     }
 }

@@ -27,11 +27,17 @@ public class VisibilityPage {
     private WebElement notDisplayedButton;
     private WebElement offScreenButton;
 
-    public void isEnable() {
+    public Boolean isInvisible() {
+        Boolean result = true;
         hideButton = WebElementsGetter.getElementWithLocatedCondition(hideButtonLocator);
         List<WebElement> buttons = setUpVisibilityButtons();
         hideButton.click();
-        buttons.forEach(WebElementVisibilityValidator::isVisible);
+        for (WebElement element : buttons) {
+            if (WebElementVisibilityValidator.isVisible(element)) {
+                result = false;
+            }
+        }
+        return result;
     }
 
     private List<WebElement> setUpVisibilityButtons() {

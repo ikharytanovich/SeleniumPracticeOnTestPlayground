@@ -7,7 +7,7 @@ import utils.driversutils.ThreadLocalDriver;
 import utils.elementsutils.WebElementsGetter;
 
 public class ScrollbarsPage {
-    private static final By containerWithButtonLocator = By.xpath("//div[@style='height:150px;overflow-y: scroll;width:300px;overflow-x:scroll']");
+    private static final By containerWithButtonLocator = By.xpath("//section/div/div[@style]");
     private static final By buttonLocator = By.xpath("//button[@class='btn btn-primary']");
 
     private WebElement button;

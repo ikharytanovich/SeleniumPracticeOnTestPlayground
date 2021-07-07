@@ -9,7 +9,6 @@ public class ProgressBarPage {
     private static final By stopButtonLocator = By.xpath("//button[@class='btn btn-info btn-test']");
     private static final By progressBarLocator = By.xpath("//div[@class='progress-bar bg-info']");
 
-
     private WebElement startButton;
     private WebElement stopButton;
     private WebElement progressBar;
