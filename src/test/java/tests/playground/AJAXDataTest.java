@@ -3,7 +3,6 @@ package tests.playground;
 import io.qameta.allure.Epic;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.MainPage;
 import tests.BaseTest;
 
 import static pages.MainPage.AJAX_DATA;
