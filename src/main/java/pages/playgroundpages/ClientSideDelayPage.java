@@ -11,10 +11,9 @@ public class ClientSideDelayPage {
     private WebElement button;
     private WebElement text;
 
-    public ClientSideDelayPage clickOnButton() {
+    public void clickOnButton() {
         button = WebElementsGetter.getElementWithLocatedCondition(buttonLocator);
         button.click();
-        return this;
     }
 
     public boolean isTextAppeared() {

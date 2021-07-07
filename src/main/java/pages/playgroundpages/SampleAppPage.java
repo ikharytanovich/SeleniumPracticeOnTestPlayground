@@ -9,7 +9,6 @@ public class SampleAppPage {
     private static final By passwordFieldLocator = By.xpath("//input[@name='Password']");
     private static final By buttonLocator = By.xpath("//button[@class='btn btn-primary']");
 
-
     private WebElement userNameField;
     private WebElement passwordField;
     private WebElement button;

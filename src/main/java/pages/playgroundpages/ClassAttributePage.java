@@ -12,14 +12,15 @@ public class ClassAttributePage {
     private WebElement blueButton;
     private Alert pageAlert;
 
-    public ClassAttributePage clickOnBlueButton() {
+    public void clickOnBlueButton() {
         blueButton = WebElementsGetter.getElementWithLocatedCondition(blueButtonLocator);
         blueButton.click();
-        return this;
     }
 
-    public void confirmAlert() {
+    public Boolean confirmAlert() {
         pageAlert = ThreadLocalDriver.getDriver().switchTo().alert();
+        String message = pageAlert.getText();
         pageAlert.accept();
+        return !message.isEmpty();
     }
 }

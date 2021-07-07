@@ -1,6 +1,7 @@
 package tests.playground;
 
 import io.qameta.allure.Epic;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import tests.BaseTest;
 
@@ -15,6 +16,6 @@ public class ClassAttributeTest extends BaseTest {
     public void test() {
         mainPage.clickOnLinkToRedirect(CLASS_ATTRIBUTE);
         classAttributePage.clickOnBlueButton();
-        classAttributePage.confirmAlert();
+        Assert.assertTrue(classAttributePage.confirmAlert());
     }
 }

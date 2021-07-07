@@ -11,10 +11,9 @@ public class HiddenLayersPage {
     private WebElement greenButtonBeforeClick;
     private WebElement greenButtonAfterClick;
 
-    public HiddenLayersPage clickObButton() {
+    public void clickObButton() {
         greenButtonBeforeClick = WebElementsGetter.getElementWithLocatedCondition(greenButtonLocator);
         greenButtonBeforeClick.click();
-        return this;
     }
 
     public Boolean isNotClickable() {
