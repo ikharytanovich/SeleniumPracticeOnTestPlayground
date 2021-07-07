@@ -3,17 +3,19 @@ package tests.playground;
 import io.qameta.allure.Epic;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.PageLink;
-import pages.playgroundpages.TextPage;
 import tests.BaseTest;
+
+import static constants.ConstantsForPages.INPUT_FOR_TEXT_PAGE;
+import static constants.PageLinkLocator.TEXT_PAGE;
+import static utils.pagesutils.IPageFactory.mainPage;
+import static utils.pagesutils.IPageFactory.textPage;
 
 @Epic("Playground")
 public class TextPageTest extends BaseTest {
-    private final TextPage textPage = new TextPage();
 
     @Test
     public void test() {
-        mainPage.moveTo(PageLink.TextPage);
-        Assert.assertTrue(textPage.inputTextAndCheckIsButtonChangedValue());
+        mainPage.clickOnLinkToRedirect(TEXT_PAGE);
+        Assert.assertTrue(textPage.inputTextAndCheckIsButtonChangedValue(INPUT_FOR_TEXT_PAGE));
     }
 }

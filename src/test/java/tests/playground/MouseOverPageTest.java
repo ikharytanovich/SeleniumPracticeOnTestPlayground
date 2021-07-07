@@ -3,17 +3,19 @@ package tests.playground;
 import io.qameta.allure.Epic;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.PageLink;
-import pages.playgroundpages.MouseOverPage;
 import tests.BaseTest;
+
+import static constants.ConstantsForPages.TIMES_TO_PRESS;
+import static constants.PageLinkLocator.MOUSE_OVER;
+import static utils.pagesutils.IPageFactory.mainPage;
+import static utils.pagesutils.IPageFactory.mouseOverPage;
 
 @Epic("Playground")
 public class MouseOverPageTest extends BaseTest {
-    private final MouseOverPage mouseOverPage = new MouseOverPage();
 
     @Test
     public void test() {
-        mainPage.moveTo(PageLink.MouseOverPage);
-        Assert.assertTrue(mouseOverPage.getCountOfClicks());
+        mainPage.clickOnLinkToRedirect(MOUSE_OVER);
+        Assert.assertTrue(mouseOverPage.isResultCorrectToClicks(TIMES_TO_PRESS));
     }
 }

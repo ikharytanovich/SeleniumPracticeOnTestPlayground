@@ -3,17 +3,19 @@ package tests.playground;
 import io.qameta.allure.Epic;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.PageLink;
-import pages.playgroundpages.VerifyTextPage;
 import tests.BaseTest;
+
+import static constants.ConstantsForPages.EXPECTED_VALUE_FOR_VERIFY_TEXT_PAGE;
+import static constants.PageLinkLocator.VERIFY_TEXT;
+import static utils.pagesutils.IPageFactory.mainPage;
+import static utils.pagesutils.IPageFactory.verifyTextPage;
 
 @Epic("Playground")
 public class VerifyTextTest extends BaseTest {
-    private final VerifyTextPage verifyTextPage = new VerifyTextPage();
 
     @Test
     public void test() {
-        mainPage.moveTo(PageLink.VerifyTextPage);
-        Assert.assertTrue(verifyTextPage.isVerified());
+        mainPage.clickOnLinkToRedirect(VERIFY_TEXT);
+        Assert.assertTrue(verifyTextPage.isVerified(EXPECTED_VALUE_FOR_VERIFY_TEXT_PAGE));
     }
 }

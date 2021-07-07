@@ -2,17 +2,18 @@ package tests.playground;
 
 import io.qameta.allure.Epic;
 import org.testng.annotations.Test;
-import pages.PageLink;
-import pages.playgroundpages.VisibilityPage;
 import tests.BaseTest;
+
+import static constants.PageLinkLocator.VISIBILITY;
+import static utils.pagesutils.IPageFactory.mainPage;
+import static utils.pagesutils.IPageFactory.visibilityPage;
 
 @Epic("Playground")
 public class VisibilityTest extends BaseTest {
-    private final VisibilityPage visibilityPage = new VisibilityPage();
 
     @Test
     public void test() {
-        mainPage.moveTo(PageLink.VisibilityPage);
+        mainPage.clickOnLinkToRedirect(VISIBILITY);
         visibilityPage.isEnable();
     }
 }

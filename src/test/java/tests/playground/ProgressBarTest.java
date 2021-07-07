@@ -2,17 +2,19 @@ package tests.playground;
 
 import io.qameta.allure.Epic;
 import org.testng.annotations.Test;
-import pages.PageLink;
-import pages.playgroundpages.ProgressBarPage;
 import tests.BaseTest;
+
+import static constants.ConstantsForPages.REQUIRED_PERCENT;
+import static constants.PageLinkLocator.PROGRESS_BAR;
+import static utils.pagesutils.IPageFactory.mainPage;
+import static utils.pagesutils.IPageFactory.progressBarPage;
 
 @Epic("Playground")
 public class ProgressBarTest extends BaseTest {
-    private final ProgressBarPage progressBarPage = new ProgressBarPage();
 
     @Test
     public void test() {
-        mainPage.moveTo(PageLink.ProgressBarPage);
-        progressBarPage.stopOnNPercent();
+        mainPage.clickOnLinkToRedirect(PROGRESS_BAR);
+        progressBarPage.stopOnNPercent(REQUIRED_PERCENT);
     }
 }

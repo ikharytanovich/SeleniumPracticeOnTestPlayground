@@ -3,17 +3,18 @@ package tests.playground;
 import io.qameta.allure.Epic;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.PageLink;
-import pages.playgroundpages.HiddenLayersPage;
 import tests.BaseTest;
+
+import static constants.PageLinkLocator.HIDDEN_LAYERS;
+import static utils.pagesutils.IPageFactory.hiddenLayersPage;
+import static utils.pagesutils.IPageFactory.mainPage;
 
 @Epic("Playground")
 public class HiddenLayersTest extends BaseTest {
-    private final HiddenLayersPage hiddenLayersPage = new HiddenLayersPage();
 
     @Test
     public void test() {
-        mainPage.moveTo(PageLink.HiddenLayers);
+        mainPage.clickOnLinkToRedirect(HIDDEN_LAYERS);
         hiddenLayersPage.clickObButton();
         Assert.assertTrue(hiddenLayersPage.isNotClickable());
     }

@@ -3,17 +3,18 @@ package tests.playground;
 import io.qameta.allure.Epic;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.PageLink;
-import pages.playgroundpages.ClickPage;
 import tests.BaseTest;
+
+import static constants.PageLinkLocator.CLICK_PAGE;
+import static utils.pagesutils.IPageFactory.clickPage;
+import static utils.pagesutils.IPageFactory.mainPage;
 
 @Epic("Playground")
 public class ClickPageTest extends BaseTest {
-    private final ClickPage clickPage = new ClickPage();
 
     @Test
     public void test() {
-        mainPage.moveTo(PageLink.ClickPage);
+        mainPage.clickOnLinkToRedirect(CLICK_PAGE);
         Assert.assertTrue(clickPage.isButtonGreenAfterClickBlue());
     }
 }

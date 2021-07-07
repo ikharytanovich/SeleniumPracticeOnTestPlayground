@@ -7,12 +7,11 @@ import utils.elementsutils.WebElementsGetter;
 public class TextPage {
     private static final By inputFieldLocator = new By.ByXPath("//input[@class='form-control']");
     private static final By buttonLocator = new By.ByXPath("//button[@class='btn btn-primary']");
-    private static final String input = "INPUT_0110";
 
     private WebElement inputField;
     private WebElement button;
 
-    public Boolean inputTextAndCheckIsButtonChangedValue() {
+    public Boolean inputTextAndCheckIsButtonChangedValue(String input) {
         inputField = WebElementsGetter.getElementWithLocatedCondition(inputFieldLocator);
         inputField.sendKeys(input);
         button = WebElementsGetter.getElementWithLocatedCondition(buttonLocator);

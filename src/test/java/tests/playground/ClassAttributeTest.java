@@ -2,17 +2,18 @@ package tests.playground;
 
 import io.qameta.allure.Epic;
 import org.testng.annotations.Test;
-import pages.PageLink;
-import pages.playgroundpages.ClassAttributePage;
 import tests.BaseTest;
+
+import static constants.PageLinkLocator.CLASS_ATTRIBUTE;
+import static utils.pagesutils.IPageFactory.classAttributePage;
+import static utils.pagesutils.IPageFactory.mainPage;
 
 @Epic("Playground")
 public class ClassAttributeTest extends BaseTest {
-    private final ClassAttributePage classAttributePage = new ClassAttributePage();
 
     @Test
     public void test() {
-        mainPage.moveTo(PageLink.ClassAttribute);
+        mainPage.clickOnLinkToRedirect(CLASS_ATTRIBUTE);
         classAttributePage.clickOnBlueButton();
         classAttributePage.confirmAlert();
     }

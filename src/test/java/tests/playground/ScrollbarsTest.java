@@ -2,17 +2,18 @@ package tests.playground;
 
 import io.qameta.allure.Epic;
 import org.testng.annotations.Test;
-import pages.PageLink;
-import pages.playgroundpages.ScrollbarsPage;
 import tests.BaseTest;
+
+import static constants.PageLinkLocator.SCROLL_BARS;
+import static utils.pagesutils.IPageFactory.mainPage;
+import static utils.pagesutils.IPageFactory.scrollbarsPage;
 
 @Epic("Playground")
 public class ScrollbarsTest extends BaseTest {
-    private final ScrollbarsPage scrollbarsPage = new ScrollbarsPage();
 
     @Test
     public void test() {
-        mainPage.moveTo(PageLink.ScrollBars);
+        mainPage.clickOnLinkToRedirect(SCROLL_BARS);
         scrollbarsPage.clickOnButton();
     }
 }

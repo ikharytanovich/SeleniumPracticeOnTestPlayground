@@ -12,23 +12,21 @@ public class DynamicTablePage {
     private static final TableUtils dynamicTableUtils = new WAIARIADynamicTableUtils();
     private static final By headersLocator = By.xpath("//span[@role='columnheader']");
     private static final By expectedValueLocator = By.xpath("//p[@class='bg-warning']");
-    private static final String headerName = "CPU";
-    private static final String rowName = "Chrome";
 
     private List<WebElement> headers;
     private WebElement searchedElement;
     private WebElement elementWithExpectedValue;
     private int idOfColumn;
 
-    public Boolean isCorrect() {
+    public Boolean isCorrect(String headerName, String rowName) {
         headers = WebElementsGetter.getElementsWithLocatedCondition(headersLocator);
         idOfColumn = dynamicTableUtils.getHeaderId(headers, headerName);
         searchedElement = dynamicTableUtils.getElementFromTableByRowNameAndColumnId(rowName, idOfColumn);
         elementWithExpectedValue = WebElementsGetter.getElementWithLocatedCondition(expectedValueLocator);
-        return getPureResultFromElement(elementWithExpectedValue).equals(searchedElement.getText());
+        return getPureResultFromElement(elementWithExpectedValue, headerName).equals(searchedElement.getText());
     }
 
-    private String getPureResultFromElement(WebElement dirtyResult) {
+    private String getPureResultFromElement(WebElement dirtyResult, String headerName) {
         String[] splitStrings = dirtyResult.getText().split(headerName + ": ");
         return splitStrings[1].trim();
     }

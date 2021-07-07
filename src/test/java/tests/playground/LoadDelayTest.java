@@ -3,17 +3,18 @@ package tests.playground;
 import io.qameta.allure.Epic;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.PageLink;
-import pages.playgroundpages.LoadDelayPage;
 import tests.BaseTest;
+
+import static constants.PageLinkLocator.LOAD_DELAY;
+import static utils.pagesutils.IPageFactory.loadDelayPage;
+import static utils.pagesutils.IPageFactory.mainPage;
 
 @Epic("Playground")
 public class LoadDelayTest extends BaseTest {
-    private final LoadDelayPage loadDelayPage = new LoadDelayPage();
 
     @Test
     public void test() {
-        mainPage.moveTo(PageLink.LoadDelay);
+        mainPage.clickOnLinkToRedirect(LOAD_DELAY);
         Assert.assertTrue(loadDelayPage.isButtonDisplayed());
     }
 }

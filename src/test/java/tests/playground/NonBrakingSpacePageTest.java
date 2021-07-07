@@ -2,17 +2,18 @@ package tests.playground;
 
 import io.qameta.allure.Epic;
 import org.testng.annotations.Test;
-import pages.PageLink;
-import pages.playgroundpages.NonBrakingSpacePage;
 import tests.BaseTest;
+
+import static constants.PageLinkLocator.NON_BRAKING_SPACE;
+import static utils.pagesutils.IPageFactory.mainPage;
+import static utils.pagesutils.IPageFactory.nonBrakingSpacePage;
 
 @Epic("Playground")
 public class NonBrakingSpacePageTest extends BaseTest {
-    private final NonBrakingSpacePage nonBrakingSpacePage = new NonBrakingSpacePage();
 
     @Test
     public void test() {
-        mainPage.moveTo(PageLink.NonBrakingSpacePage);
+        mainPage.clickOnLinkToRedirect(NON_BRAKING_SPACE);
         nonBrakingSpacePage.click();
     }
 }
