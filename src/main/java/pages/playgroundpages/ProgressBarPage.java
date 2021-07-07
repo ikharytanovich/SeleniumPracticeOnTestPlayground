@@ -19,8 +19,8 @@ public class ProgressBarPage {
         startButton = WebElementsGetter.getElementWithLocatedCondition(startButtonLocator);
         stopButton = WebElementsGetter.getElementWithLocatedCondition(stopButtonLocator);
         startButton.click();
-        for (; ; ) {
-            progressBar = WebElementsGetter.getElementWithLocatedCondition(progressBarLocator);
+        progressBar = WebElementsGetter.getElementWithLocatedCondition(progressBarLocator);
+        while (true) {
             if (progressBar.getText().equals(percentStringValue)) {
                 stopButton.click();
                 break;

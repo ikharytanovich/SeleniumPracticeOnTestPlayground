@@ -8,7 +8,6 @@ public class MouseOverPage {
     private static final By linkToClickLocator = By.xpath("//div/a[@class]");
     private static final By resultLocator = By.xpath("//span[@class='badge badge-light']");
 
-
     private WebElement link;
     private WebElement result;
 
