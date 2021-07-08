@@ -1,6 +1,7 @@
 package tests.playground;
 
 import io.qameta.allure.Epic;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.playgroundpages.MainPage;
 import tests.BaseTest;
@@ -16,6 +17,6 @@ public class SampleAppTest extends BaseTest {
     @Test
     public void test() {
         MainPage.clickOnLinkToRedirect(SAMPLE_APP);
-        sampleAppPage.login(USER_NAME_VALUE, PASSWORD_VALUE);
+        Assert.assertTrue(sampleAppPage.login(USER_NAME_VALUE, PASSWORD_VALUE));
     }
 }

@@ -10,8 +10,9 @@ public class NonBrakingSpacePage extends BasePage {
     private static final By buttonLocator = By.xpath("//button[contains(text(),'My')][contains(text(),'Button')]");
 
     @Step("Click")
-    public void click() {
+    public Boolean click() {
         WebElement button = WebElementsGetter.getElementWithLocatedCondition(buttonLocator);
         button.click();
+        return true;
     }
 }

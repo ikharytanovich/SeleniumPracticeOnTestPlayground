@@ -20,12 +20,11 @@ public class HiddenLayersPage extends BasePage {
     public Boolean isNotClickable() {
         Boolean result = false;
         WebElement greenButtonAfterClick = WebElementsGetter.getElementWithLocatedCondition(greenButtonLocator);
-        try {//TODO
+        try {
             greenButtonAfterClick.click();
         } catch (ElementClickInterceptedException exception) {
             result = true;
         }
-
         return result;
     }
 }

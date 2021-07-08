@@ -7,11 +7,12 @@ import pages.BasePage;
 import utils.elementutils.WebElementsGetter;
 
 public class VerifyTextPage extends BasePage {
-    private static final By elementWithTextLocator = By.xpath("//span[contains(text(),'Welcome')]/*[contains(text(),'')]/parent::span");
+    private static final By actualTextLocator = By.xpath("//span[contains(text(),'Welcome')]/*[contains(text(),'')]/parent::span");
+    private static final String expectedText = "Welcome UserName!";
 
-    @Step("Verify text with value:{expectedValue}")
-    public boolean isVerified(String expectedValue) {
-        WebElement elementWithText = WebElementsGetter.getElementWithLocatedCondition(elementWithTextLocator);
-        return elementWithText.getText().trim().equals(expectedValue);
+    @Step("Verify text")
+    public boolean isVerified() {
+        WebElement actualText = WebElementsGetter.getElementWithLocatedCondition(actualTextLocator);
+        return expectedText.equals(actualText.getText());
     }
 }

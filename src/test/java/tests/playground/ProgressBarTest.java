@@ -1,6 +1,7 @@
 package tests.playground;
 
 import io.qameta.allure.Epic;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.playgroundpages.MainPage;
 import tests.BaseTest;
@@ -15,6 +16,6 @@ public class ProgressBarTest extends BaseTest {
     @Test
     public void test() {
         MainPage.clickOnLinkToRedirect(PROGRESS_BAR);
-        progressBarPage.stopOnNPercent(REQUIRED_PERCENT);
+        Assert.assertTrue(progressBarPage.stopOnNPercent(REQUIRED_PERCENT));
     }
 }
