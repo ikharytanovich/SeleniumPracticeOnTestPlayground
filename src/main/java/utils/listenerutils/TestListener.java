@@ -8,11 +8,7 @@ import org.testng.ITestResult;
 import utils.driverutils.ThreadLocalDriver;
 import utils.loggerutils.ILogger;
 
-import java.util.Random;
-
 public class TestListener implements ITestListener, ILogger {
-    private static final Random random = new Random();
-    private static final int randomIntRange = 10000;
 
     @Override
     public void onTestSuccess(ITestResult result) {
