@@ -2,7 +2,6 @@ package pages.playgroundpages;
 
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import pages.BasePage;
 import utils.elementutils.WebElementsGetter;
 
@@ -11,8 +10,7 @@ public class NonBrakingSpacePage extends BasePage {
 
     @Step("Click")
     public Boolean click() {
-        WebElement button = WebElementsGetter.getElementWithLocatedCondition(buttonLocator);
-        button.click();
+        WebElementsGetter.getElementWithLocatedCondition(buttonLocator).click();
         return true;
     }
 }

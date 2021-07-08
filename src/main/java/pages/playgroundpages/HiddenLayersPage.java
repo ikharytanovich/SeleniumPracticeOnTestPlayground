@@ -12,8 +12,7 @@ public class HiddenLayersPage extends BasePage {
 
     @Step("Click on button")
     public void clickObButton() {
-        WebElement greenButtonBeforeClick = WebElementsGetter.getElementWithLocatedCondition(greenButtonLocator);
-        greenButtonBeforeClick.click();
+        WebElementsGetter.getElementWithLocatedCondition(greenButtonLocator).click();
     }
 
     @Step("Verify that is button not clickable")

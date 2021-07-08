@@ -14,11 +14,9 @@ public class ScrollbarsPage extends BasePage {
 
     @Step("Scroll to button and click")
     public Boolean clickOnButton() {
-        WebElement containerWithButton = WebElementsGetter.getElementWithLocatedCondition(containerWithButtonLocator);
-        containerWithButton.click();
-        Actions actionsInContainer = new Actions(ThreadLocalDriver.getDriver());
+        WebElementsGetter.getElementWithLocatedCondition(containerWithButtonLocator).click();
         WebElement button = WebElementsGetter.getElementWithLocatedCondition(buttonLocator);
-        actionsInContainer.moveToElement(button).click().build().perform();
+        new Actions(ThreadLocalDriver.getDriver()).moveToElement(button).click().build().perform();
         return true;
     }
 }

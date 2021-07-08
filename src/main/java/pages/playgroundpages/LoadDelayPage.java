@@ -2,7 +2,6 @@ package pages.playgroundpages;
 
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import pages.BasePage;
 import utils.elementutils.WebElementsGetter;
 
@@ -11,7 +10,6 @@ public class LoadDelayPage extends BasePage {
 
     @Step("Verify that is button displayed after load")
     public Boolean isButtonDisplayed() {
-        WebElement button = WebElementsGetter.getElementWithLocatedCondition(buttonLocator);
-        return button.isDisplayed();
+        return WebElementsGetter.getElementWithLocatedCondition(buttonLocator).isDisplayed();
     }
 }

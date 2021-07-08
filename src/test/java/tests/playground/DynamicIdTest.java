@@ -15,6 +15,6 @@ public class DynamicIdTest extends BaseTest {
     @Test
     public void test() {
         MainPage.clickOnLinkToRedirect(DYNAMIC_ID);
-        Assert.assertTrue(dynamicIdPage.clickOnButton());
+        Assert.assertTrue(dynamicIdPage.isButtonClicked());
     }
 }

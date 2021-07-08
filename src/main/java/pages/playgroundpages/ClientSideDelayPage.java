@@ -2,7 +2,6 @@ package pages.playgroundpages;
 
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import pages.BasePage;
 import utils.elementutils.WebElementsGetter;
 
@@ -12,13 +11,11 @@ public class ClientSideDelayPage extends BasePage {
 
     @Step("Click on button")
     public void clickOnButton() {
-        WebElement button = WebElementsGetter.getElementWithLocatedCondition(buttonLocator);
-        button.click();
+        WebElementsGetter.getElementWithLocatedCondition(buttonLocator).click();
     }
 
     @Step("Verify that text appeared")
     public boolean isTextAppeared() {
-        WebElement text = WebElementsGetter.getElementWithLocatedCondition(textLocator);
-        return text.isDisplayed();
+        return WebElementsGetter.getElementWithLocatedCondition(textLocator).isDisplayed();
     }
 }

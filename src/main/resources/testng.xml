@@ -1,23 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Personal Suite" parallel="classes" thread-count="4">
-    <test name="Playground Tests">
+<suite name="Personal Suite" parallel="tests" thread-count="4">
+    <test name="AjaxDataTest">
         <classes>
             <class name="tests.playground.AJAXDataTest"/>
+        </classes>
+    </test>
+    <test name="ClassAttributeTest">
+        <classes>
             <class name="tests.playground.ClassAttributeTest"/>
+        </classes>
+    </test>
+    <test name="ClickPageTest">
+        <classes>
             <class name="tests.playground.ClickPageTest"/>
+        </classes>
+    </test>
+    <test name="ClientSideDelayTest">
+        <classes>
             <class name="tests.playground.ClientSideDelayTest"/>
+        </classes>
+    </test>
+    <test name="DynamicIdTest">
+        <classes>
             <class name="tests.playground.DynamicIdTest"/>
+        </classes>
+    </test>
+    <test name="DynamicTableTest">
+        <classes>
             <class name="tests.playground.DynamicTableTest"/>
+        </classes>
+    </test>
+    <test name="HiddenLayersTest">
+        <classes>
             <class name="tests.playground.HiddenLayersTest"/>
+        </classes>
+    </test>
+    <test name="LoadDelayTest">
+        <classes>
             <class name="tests.playground.LoadDelayTest"/>
+        </classes>
+    </test>
+    <test name="MouseOverPageTest">
+        <classes>
             <class name="tests.playground.MouseOverPageTest"/>
+        </classes>
+    </test>
+    <test name="NonBrakingSpacePageTest">
+        <classes>
             <class name="tests.playground.NonBrakingSpacePageTest"/>
+        </classes>
+    </test>
+    <test name="ProgressBarTest">
+        <classes>
             <class name="tests.playground.ProgressBarTest"/>
+        </classes>
+    </test>
+    <test name="SampleAppTest">
+        <classes>
             <class name="tests.playground.SampleAppTest"/>
+        </classes>
+    </test>
+    <test name="ScrollbarsTest">
+        <classes>
             <class name="tests.playground.ScrollbarsTest"/>
+        </classes>
+    </test>
+    <test name="TextPageTest">
+        <classes>
             <class name="tests.playground.TextPageTest"/>
+        </classes>
+    </test>
+    <test name="VerifyTextTest">
+        <classes>
             <class name="tests.playground.VerifyTextTest"/>
+        </classes>
+    </test>
+    <test name="VisibilityTest">
+        <classes>
             <class name="tests.playground.VisibilityTest"/>
         </classes>
     </test>

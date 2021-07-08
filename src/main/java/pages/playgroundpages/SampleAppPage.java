@@ -2,7 +2,6 @@ package pages.playgroundpages;
 
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import pages.BasePage;
 import utils.elementutils.WebElementsGetter;
 
@@ -14,12 +13,9 @@ public class SampleAppPage extends BasePage {
 
     @Step("Login in app with UserName:{username} and password:{password}")
     public Boolean login(String username, String password) {
-        WebElement userNameField = WebElementsGetter.getElementWithLocatedCondition(userNameFieldLocator);
-        WebElement passwordField = WebElementsGetter.getElementWithLocatedCondition(passwordFieldLocator);
-        WebElement button = WebElementsGetter.getElementWithLocatedCondition(buttonLocator);
-        userNameField.sendKeys(username);
-        passwordField.sendKeys(password);
-        button.click();
-        return button.getText().equals(buttonLogOutValue);
+        WebElementsGetter.getElementWithLocatedCondition(userNameFieldLocator).sendKeys(username);
+        WebElementsGetter.getElementWithLocatedCondition(passwordFieldLocator).sendKeys(password);
+        WebElementsGetter.getElementWithLocatedCondition(buttonLocator).click();
+        return WebElementsGetter.getElementWithLocatedCondition(buttonLocator).getText().equals(buttonLogOutValue);
     }
 }

@@ -2,7 +2,6 @@ package pages.playgroundpages;
 
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import pages.BasePage;
 import utils.elementutils.WebElementsGetter;
 
@@ -12,7 +11,6 @@ public class VerifyTextPage extends BasePage {
 
     @Step("Verify text")
     public boolean isVerified() {
-        WebElement actualText = WebElementsGetter.getElementWithLocatedCondition(actualTextLocator);
-        return expectedText.equals(actualText.getText());
+        return expectedText.equals(WebElementsGetter.getElementWithLocatedCondition(actualTextLocator).getText());
     }
 }

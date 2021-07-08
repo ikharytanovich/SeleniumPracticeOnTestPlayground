@@ -12,18 +12,17 @@ public class ProgressBarPage extends BasePage {
     private static final By progressBarLocator = By.xpath("//div[@class='progress-bar bg-info']");
 
     @Step("Stop on {percent}%")
-    public Boolean stopOnNPercent(int percent) {
+    public Boolean isStoppedOnNPercent(int percent) {
         String percentStringValue = percent + "%";
-        WebElement startButton = WebElementsGetter.getElementWithLocatedCondition(startButtonLocator);
-        WebElement stopButton = WebElementsGetter.getElementWithLocatedCondition(stopButtonLocator);
-        startButton.click();
+        WebElementsGetter.getElementWithLocatedCondition(startButtonLocator).click();
         WebElement progressBar = WebElementsGetter.getElementWithLocatedCondition(progressBarLocator);
         while (true) {
             if (progressBar.getText().equals(percentStringValue)) {
-                stopButton.click();
+                WebElementsGetter.getElementWithLocatedCondition(stopButtonLocator).click();
                 break;
             }
         }
         return progressBar.getText().equals(percentStringValue);
     }
 }
+

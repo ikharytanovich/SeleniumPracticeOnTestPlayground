@@ -16,6 +16,6 @@ public class ClassAttributeTest extends BaseTest {
     public void test() {
         MainPage.clickOnLinkToRedirect(CLASS_ATTRIBUTE);
         classAttributePage.clickOnBlueButton();
-        Assert.assertTrue(classAttributePage.confirmAlert());
+        Assert.assertTrue(classAttributePage.isAlertConfirmed());
     }
 }

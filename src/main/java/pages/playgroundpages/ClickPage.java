@@ -2,7 +2,6 @@ package pages.playgroundpages;
 
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import pages.BasePage;
 import utils.elementutils.WebElementsGetter;
 
@@ -12,9 +11,7 @@ public class ClickPage extends BasePage {
 
     @Step("Verify that button green after click on blue button")
     public Boolean isButtonGreenAfterClickBlue() {
-        WebElement blueButton = WebElementsGetter.getElementWithLocatedCondition(blueButtonLocator);
-        blueButton.click();
-        WebElement greenButton = WebElementsGetter.getElementWithLocatedCondition(greenButtonLocator);
-        return greenButton.isDisplayed();
+        WebElementsGetter.getElementWithLocatedCondition(blueButtonLocator).click();
+        return WebElementsGetter.getElementWithLocatedCondition(greenButtonLocator).isDisplayed();
     }
 }

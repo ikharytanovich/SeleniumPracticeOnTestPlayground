@@ -2,7 +2,6 @@ package pages.playgroundpages;
 
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import pages.BasePage;
 import utils.elementutils.WebElementsGetter;
 
@@ -13,10 +12,8 @@ public class MouseOverPage extends BasePage {
     @Step("Verify that result of clicks equals to {clicks}")
     public Boolean isResultCorrectToClicks(int clicks) {
         for (int i = 0; i < clicks; i++) {
-            WebElement link = WebElementsGetter.getElementWithLocatedCondition(linkToClickLocator);
-            link.click();
+            WebElementsGetter.getElementWithLocatedCondition(linkToClickLocator).click();
         }
-        WebElement result = WebElementsGetter.getElementWithLocatedCondition(resultLocator);
-        return Integer.parseInt(result.getText()) == clicks;
+        return WebElementsGetter.getElementWithLocatedCondition(resultLocator).getText().equals(String.valueOf(clicks));
     }
 }

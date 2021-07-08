@@ -29,7 +29,7 @@ public class TestListener implements ITestListener, ILogger {
 
     @Attachment(type = "image/png")
     public byte[] takeScreenshot() {
-        return ((TakesScreenshot) ThreadLocalDriver.getDriver()).getScreenshotAs(OutputType.BYTES);
+        return ((TakesScreenshot) (ThreadLocalDriver.getDriver())).getScreenshotAs(OutputType.BYTES);
     }
 
 

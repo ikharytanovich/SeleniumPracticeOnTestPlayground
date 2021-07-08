@@ -2,7 +2,6 @@ package pages.playgroundpages;
 
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import pages.BasePage;
 import utils.elementutils.WebElementsGetter;
 
@@ -12,10 +11,8 @@ public class TextPage extends BasePage {
 
     @Step("Verify that input text:{input} after click on button is same")
     public Boolean inputTextAndCheckIsButtonChangedValue(String input) {
-        WebElement inputField = WebElementsGetter.getElementWithLocatedCondition(inputFieldLocator);
-        inputField.sendKeys(input);
-        WebElement button = WebElementsGetter.getElementWithLocatedCondition(buttonLocator);
-        button.click();
-        return button.getText().equals(input);
+        WebElementsGetter.getElementWithLocatedCondition(inputFieldLocator).sendKeys(input);
+        WebElementsGetter.getElementWithLocatedCondition(buttonLocator).click();
+        return WebElementsGetter.getElementWithLocatedCondition(buttonLocator).getText().equals(input);
     }
 }

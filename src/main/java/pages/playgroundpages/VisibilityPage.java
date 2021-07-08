@@ -46,6 +46,4 @@ public class VisibilityPage extends BasePage {
         return Arrays.asList
                 (removedButton, zeroWidthButton, overlappedButton, transparentButton, invisibleButton, notDisplayedButton, offScreenButton);
     }
-
-
 }

@@ -16,6 +16,6 @@ public class ProgressBarTest extends BaseTest {
     @Test
     public void test() {
         MainPage.clickOnLinkToRedirect(PROGRESS_BAR);
-        Assert.assertTrue(progressBarPage.stopOnNPercent(REQUIRED_PERCENT));
+        Assert.assertTrue(progressBarPage.isStoppedOnNPercent(REQUIRED_PERCENT));
     }
 }
