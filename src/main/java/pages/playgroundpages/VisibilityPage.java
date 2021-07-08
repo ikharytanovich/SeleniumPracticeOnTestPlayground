@@ -3,13 +3,14 @@ package pages.playgroundpages;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import utils.elementsutils.WebElementVisibilityValidator;
-import utils.elementsutils.WebElementsGetter;
+import pages.BasePage;
+import utils.elementutils.WebElementVisibilityValidator;
+import utils.elementutils.WebElementsGetter;
 
 import java.util.Arrays;
 import java.util.List;
 
-public class VisibilityPage {
+public class VisibilityPage extends BasePage {
     private static final By hideButtonLocator = By.xpath("//button[@id='hideButton']");
     private static final By removedButtonLocator = By.xpath("//button[@id='removedButton']");
     private static final By zeroWidthButtonLocator = By.xpath("//button[@id='zeroWidthButton']");

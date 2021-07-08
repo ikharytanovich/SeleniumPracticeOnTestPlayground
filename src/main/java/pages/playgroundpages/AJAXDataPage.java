@@ -3,9 +3,10 @@ package pages.playgroundpages;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import utils.elementsutils.WebElementsGetter;
+import pages.BasePage;
+import utils.elementutils.WebElementsGetter;
 
-public class AJAXDataPage {
+public class AJAXDataPage extends BasePage {
     private static final By buttonLocator = By.xpath("//button[@class='btn btn-primary']");
     private static final By dataFieldLocator = By.xpath("//p[@class='bg-success']");
 
@@ -13,7 +14,9 @@ public class AJAXDataPage {
     public Boolean isDataDisplayedAfterButtonClick() {
         WebElement button = WebElementsGetter.getElementWithLocatedCondition(buttonLocator);
         button.click();
+        log().info("click on button");
         WebElement dataField = WebElementsGetter.getElementWithLocatedCondition(dataFieldLocator);
+        log().info("check is data displayed");
         return dataField.isDisplayed();
     }
 }

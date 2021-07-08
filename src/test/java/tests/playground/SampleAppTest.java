@@ -2,20 +2,20 @@ package tests.playground;
 
 import io.qameta.allure.Epic;
 import org.testng.annotations.Test;
+import pages.playgroundpages.MainPage;
 import tests.BaseTest;
 
-import static constants.ConstantsForPages.PASSWORD_VALUE;
-import static constants.ConstantsForPages.USER_NAME_VALUE;
-import static pages.MainPage.SAMPLE_APP;
-import static utils.pagesutils.IPageFactory.mainPage;
-import static utils.pagesutils.IPageFactory.sampleAppPage;
+import static constants.PageConstants.PASSWORD_VALUE;
+import static constants.PageConstants.USER_NAME_VALUE;
+import static pages.playgroundpages.MainPage.SAMPLE_APP;
+import static utils.pageutils.IPageFactory.sampleAppPage;
 
 @Epic("Playground")
 public class SampleAppTest extends BaseTest {
 
     @Test
     public void test() {
-        mainPage.clickOnLinkToRedirect(SAMPLE_APP);
+        MainPage.clickOnLinkToRedirect(SAMPLE_APP);
         sampleAppPage.login(USER_NAME_VALUE, PASSWORD_VALUE);
     }
 }

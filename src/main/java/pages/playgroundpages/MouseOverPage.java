@@ -3,9 +3,10 @@ package pages.playgroundpages;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import utils.elementsutils.WebElementsGetter;
+import pages.BasePage;
+import utils.elementutils.WebElementsGetter;
 
-public class MouseOverPage {
+public class MouseOverPage extends BasePage {
     private static final By linkToClickLocator = By.xpath("//div/a[@class]");
     private static final By resultLocator = By.xpath("//span[@class='badge badge-light']");
 

@@ -3,20 +3,20 @@ package tests.playground;
 import io.qameta.allure.Epic;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.playgroundpages.MainPage;
 import tests.BaseTest;
 
-import static constants.ConstantsForPages.DYNAMIC_TABLE_HEADER_NAME;
-import static constants.ConstantsForPages.DYNAMIC_TABLE_ROW_NAME;
-import static pages.MainPage.DYNAMIC_TABLE;
-import static utils.pagesutils.IPageFactory.dynamicTablePage;
-import static utils.pagesutils.IPageFactory.mainPage;
+import static constants.PageConstants.DYNAMIC_TABLE_HEADER_NAME;
+import static constants.PageConstants.DYNAMIC_TABLE_ROW_NAME;
+import static pages.playgroundpages.MainPage.DYNAMIC_TABLE;
+import static utils.pageutils.IPageFactory.dynamicTablePage;
 
 @Epic("Playground")
 public class DynamicTableTest extends BaseTest {
 
     @Test
     public void test() {
-        mainPage.clickOnLinkToRedirect(DYNAMIC_TABLE);
+        MainPage.clickOnLinkToRedirect(DYNAMIC_TABLE);
         Assert.assertTrue(dynamicTablePage.isCorrect(DYNAMIC_TABLE_HEADER_NAME, DYNAMIC_TABLE_ROW_NAME));
     }
 }

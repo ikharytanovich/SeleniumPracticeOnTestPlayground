@@ -3,13 +3,14 @@ package pages.playgroundpages;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import pages.BasePage;
 import ui.TableUtils;
 import ui.impl.WAIARIADynamicTableUtils;
-import utils.elementsutils.WebElementsGetter;
+import utils.elementutils.WebElementsGetter;
 
 import java.util.List;
 
-public class DynamicTablePage {
+public class DynamicTablePage extends BasePage {
     private static final TableUtils dynamicTableUtils = new WAIARIADynamicTableUtils();
     private static final By headersLocator = By.xpath("//span[@role='columnheader']");
     private static final By expectedValueLocator = By.xpath("//p[@class='bg-warning']");

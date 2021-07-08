@@ -3,18 +3,18 @@ package tests.playground;
 import io.qameta.allure.Epic;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.playgroundpages.MainPage;
 import tests.BaseTest;
 
-import static pages.MainPage.CLIENT_SIDE_DELAY;
-import static utils.pagesutils.IPageFactory.clientSideDelayPage;
-import static utils.pagesutils.IPageFactory.mainPage;
+import static pages.playgroundpages.MainPage.CLIENT_SIDE_DELAY;
+import static utils.pageutils.IPageFactory.clientSideDelayPage;
 
 @Epic("Playground")
 public class ClientSideDelayTest extends BaseTest {
 
     @Test
     public void test() {
-        mainPage.clickOnLinkToRedirect(CLIENT_SIDE_DELAY);
+        MainPage.clickOnLinkToRedirect(CLIENT_SIDE_DELAY);
         clientSideDelayPage.clickOnButton();
         Assert.assertTrue(clientSideDelayPage.isTextAppeared());
     }

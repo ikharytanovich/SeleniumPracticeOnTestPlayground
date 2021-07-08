@@ -3,7 +3,7 @@ package ui.impl;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import ui.TableUtils;
-import utils.elementsutils.WebElementsGetter;
+import utils.elementutils.WebElementsGetter;
 
 import java.util.List;
 

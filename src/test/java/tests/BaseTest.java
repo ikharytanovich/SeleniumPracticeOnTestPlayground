@@ -2,14 +2,17 @@ package tests;
 
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import utils.driversutils.ThreadLocalDriver;
+import org.testng.annotations.Listeners;
+import pages.BasePage;
+import utils.driverutils.ThreadLocalDriver;
+import utils.listenerutils.TestListener;
+import utils.loggerutils.ILogger;
 
-import static utils.pagesutils.IPageFactory.basePage;
-
-public class BaseTest {
+@Listeners({TestListener.class})
+public class BaseTest implements ILogger {
     @BeforeClass
-    public void setUp() {
-        basePage.getToMainPage();
+    public void beforeClass() {
+        BasePage.getToMainPage();
     }
 
     @AfterClass

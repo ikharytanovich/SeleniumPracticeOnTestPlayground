@@ -1,14 +1,14 @@
 package pages.playgroundpages;
 
-import io.qameta.allure.Epic;
 import io.qameta.allure.Step;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import utils.driversutils.ThreadLocalDriver;
-import utils.elementsutils.WebElementsGetter;
+import pages.BasePage;
+import utils.driverutils.ThreadLocalDriver;
+import utils.elementutils.WebElementsGetter;
 
-public class ClassAttributePage {
+public class ClassAttributePage extends BasePage {
     private static final By blueButtonLocator = By.xpath("//button[contains(concat(' ',normalize-space(@class),' '),' btn-primary ')]");
 
     @Step("Click on blue button")

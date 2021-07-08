@@ -3,9 +3,10 @@ package pages.playgroundpages;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import utils.elementsutils.WebElementsGetter;
+import pages.BasePage;
+import utils.elementutils.WebElementsGetter;
 
-public class ProgressBarPage {
+public class ProgressBarPage extends BasePage {
     private static final By startButtonLocator = By.xpath("//button[@class='btn btn-primary btn-test']");
     private static final By stopButtonLocator = By.xpath("//button[@class='btn btn-info btn-test']");
     private static final By progressBarLocator = By.xpath("//div[@class='progress-bar bg-info']");
