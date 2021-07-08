@@ -1,6 +1,7 @@
 package tests.playground;
 
 import io.qameta.allure.Epic;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.playgroundpages.MainPage;
 import tests.BaseTest;
@@ -14,6 +15,6 @@ public class DynamicIdTest extends BaseTest {
     @Test
     public void test() {
         MainPage.clickOnLinkToRedirect(DYNAMIC_ID);
-        dynamicIdPage.clickOnButton();
+        Assert.assertTrue(dynamicIdPage.clickOnButton());
     }
 }

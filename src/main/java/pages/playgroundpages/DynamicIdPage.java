@@ -9,9 +9,10 @@ import utils.elementutils.WebElementsGetter;
 public class DynamicIdPage extends BasePage {
     private static final By dynamicIdLocator = new By.ByXPath("//button[@class='btn btn-primary']");
 
-    @Step("Click on button")
-    public void clickOnButton() {
+    @Step("Find button by xpath and click on it")
+    public Boolean clickOnButton() {
         WebElement button = WebElementsGetter.getElementWithLocatedCondition(dynamicIdLocator);
         button.click();
+        return true;
     }
 }
