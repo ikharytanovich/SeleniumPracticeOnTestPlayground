@@ -25,6 +25,7 @@ public class HiddenLayersPage extends BasePage {
         } catch (ElementClickInterceptedException exception) {
             result = true;
         }
+
         return result;
     }
 }
