@@ -17,5 +17,7 @@ public class ClassAttributeTest extends BaseTest {
         MainPage.clickOnLinkToRedirect(CLASS_ATTRIBUTE);
         classAttributePage.clickOnBlueButton();
         Assert.assertTrue(classAttributePage.isAlertConfirmed());
+        classAttributePage.clickOnButtonWithJS();
+        Assert.assertTrue(classAttributePage.isAlertConfirmed());
     }
 }
